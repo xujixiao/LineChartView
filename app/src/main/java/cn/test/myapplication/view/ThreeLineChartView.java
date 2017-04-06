@@ -257,7 +257,7 @@ public class ThreeLineChartView extends View {
         }
         initData();
         if (!noTitle) {
-            drawTitle(canvas);// 画"近七天收益趋势"
+            drawTitle(canvas);// 画"title"
         } else {
             marginTop = viewHeight / 8.5F;
             //marginTop = marginBottom;
@@ -387,7 +387,7 @@ public class ThreeLineChartView extends View {
         // 计算出右边距
         marginRight = viewWidth / 12;
         // 计算出上边距
-        marginTop = getTextHeight(titleSize, "近七天收益趋势") * 4;
+        marginTop = getTextHeight(titleSize, "title") * 4;
         //计算出下边距
         marginBottom = viewHeight / 10;
 
@@ -405,14 +405,14 @@ public class ThreeLineChartView extends View {
         canvas.drawARGB(0, 0, 0, 0);
     }
 
-    // 画"近七天收益趋势"
+    // 画"title"
     private void drawTitle(Canvas canvas) {
 
         titlePaint.setTextSize(titleSize);
 
-        float textHeight = getTextHeight(titleSize, "近七天收益趋势");
+        float textHeight = getTextHeight(titleSize, "title");
         textHeight = marginTop - textHeight * 5 / 2;
-        canvas.drawText("近七天收益趋势", getTextWidth(titleSize, "----"), textHeight, titlePaint);
+        canvas.drawText("title", getTextWidth(titleSize, "----"), textHeight, titlePaint);
     }
 
     // 画表格虚线

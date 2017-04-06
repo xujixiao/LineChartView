@@ -220,7 +220,7 @@ public class SingleLineChartView extends View {
         }
         initData();
         if (!noTitle) {
-            drawTitle(canvas);// 画"近七天收益趋势"
+            drawTitle(canvas);// 画"title"
         } else {
             marginTop = viewHeight / 8.5F;
             //marginTop = marginBottom;
@@ -330,7 +330,7 @@ public class SingleLineChartView extends View {
         canvas.drawARGB(0, 0, 0, 0);
     }
 
-    // 画"近七天收益趋势"
+    // 画"title"
     private void drawTitle(Canvas canvas) {
 
         titlePaint.setTextSize(titleSize);
